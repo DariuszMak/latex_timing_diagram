@@ -1,0 +1,65 @@
+% Timing Diagram using the 'tikz-timing' package (v0.5 - 2009/05/15).
+%
+% (c) Copyright 2009 - Martin Scharrer <martin@scharrer-online.de>
+%
+% This code is open source under the GPLv3 and/or the LPPL v1.3 (or later).
+% Please feel free to use, change and copy it for your own benefit.
+%
+
+\documentclass{article}
+\usepackage{tikz-timing}[2009/05/15]
+
+%%%<
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+%%%>
+
+\begin{comment}
+:Title: Timing diagram with the tikz-timing package
+:Slug: tikz-timing
+
+This example shows how to make a timing diagram with the `tikz-timing package`_. 
+This timing diagram was used by the package author in a recent work and 
+shows several clock and pulse signals. The relationship between the clock and 
+signal edges is shown using horizontal lines.
+
+Timing diagrams like this can be done using the ``tikztimingtable`` 
+environment which has the same syntax as a ``tabular`` environment with two 
+columns. The first column holds the signal name, the second one the timing 
+characters. See the `package manual`_  for detailed information about them.
+
+.. _tikz-timing package: http://www.ctan.org/tex-archive/help/Catalogue/entries/tikz-timing.html
+.. _package manual: http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf
+
+\end{comment}
+
+\pagestyle{empty}
+\def\degr{${}^\circ$}
+
+\begin{document}
+
+\def\degr{${}^\circ$}
+\begin{tikztimingtable}
+$I_{0}$ & 18{2H}\\
+$I_{1}$ & 18{2H}\\
+$I_{2}$ & 18{2L}\\
+$I_{3}$ & 18{2H}\\
+$OK_{(button)}$ & LLLLCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \\
+$C_{(receiver)}$ & LLLL 14{2C} LLLL\\
+CBO & LLLL LLLL CHHH CLLL CHHH HHHH HHHH HHHH HHHH\\
+$O_{0}$ & 16{2L}CHHH\\
+$O_{1}$ & 16{2L}CHHH\\
+$O_{2}$ & 18{2L}\\
+$O_{3}$ & 16{2L}CHHH\\
+Parity bit & 16{2L}CHHH\\
+\extracode
+  \tablerules
+%  \begin{pgfonlayer}{background}
+%    \foreach \n in {1,...,10}
+%      \draw [help lines] (A\n) -- (B\n);
+%  \end{pgfonlayer}
+\end{tikztimingtable}
+%
+\end{document}
