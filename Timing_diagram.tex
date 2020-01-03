@@ -189,25 +189,14 @@ To add \texttt{booktab} like table rules simply add the command
 
 \def\degr{${}^\circ$}
 \begin{tikztimingtable}
-J & H 20{2C}\\
-K & H 20{2C}\\
-C & H 20{2C}\\
-$Q_{t+1}$ & H 20{2C}\\
-%  Clock 128\,MHz 90\degr   & [C] 2{2C} N(A2) 8{2C} N(A6) 2{2C} C\\
-%  Clock 128\,MHz 180\degr  & C 2{2C} N(A3) 8{2C} N(A7) 2{2C} G\\
-%  Clock 128\,MHz 270\degr  & 3{2C} N(A4) 8{2C} N(A8) 2C C\\
-%  Coarse Pulse             & 3L 16H 6L \\
-%  Coarse Pulse - Delayed 1 & 4L N(B2) 16H N(B6) 5L \\
-%  Coarse Pulse - Delayed 2 & 5L N(B3) 16H N(B7) 4L \\
-%  Coarse Pulse - Delayed 3 & 6L 16H 3L \\
-%  \\
-%  Final Pulse Set          & 3L 16H N(B5) 6L \\
-%  Final Pulse $\overline{\mbox{Reset}}$ & 6L N(B4) 16H 3L \\
-%  Final Pulse              & 3L N(B1) 19H N(B8) 3L \\
+J & LLLLLL N(A1) CHHHHH N(A2) CLLLLLLLLLCHHHHHHHHHHHHHHHCLLLLLLLLLCHHHHH 19{H}\\
+K & LLLLLLLLLLLLLLCHHHHHHCLLLLCHHHHHHHHHHHHHHHCLLLLLCHHHHHCLLLLLLLLLLLLLLLLLL\\
+C & H 36{2C} G\\
+$Q_{t+1}$ & LLLLLL N(B1) LCHHHH N(B2) HHHCLLLLLLLCHHHCLLLCHHHCLLLLLLLLLLLLLLLCHHHHHHHHHHHHHHHHHHHHH\\
 \extracode
   \tablerules
 %  \begin{pgfonlayer}{background}
-%    \foreach \n in {1,...,8}
+%    \foreach \n in {1,...,10}
 %      \draw [help lines] (A\n) -- (B\n);
 %  \end{pgfonlayer}
 \end{tikztimingtable}
