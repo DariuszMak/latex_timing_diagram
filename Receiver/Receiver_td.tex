@@ -42,24 +42,25 @@ characters. See the `package manual`_  for detailed information about them.
 
 \def\degr{${}^\circ$}
 \begin{tikztimingtable}
-$I_{0}$ & 18{2H}\\
+$I_{0}$ & HHHH N(A2) HHHH N(A3) HHHH N(A4) HHHH N(A5) HHHH N(A6) HHHH N(A7) HHHH N(A8) HHHH N(A9) HHHH\\
 $I_{1}$ & 18{2H}\\
 $I_{2}$ & 18{2L}\\
 $I_{3}$ & 18{2H}\\
 $OK_{(button)}$ & LLLLCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \\
 $C_{(receiver)}$ & LLLL 14{2C} LLLL\\
 CBO & LLLL LLLL CHHH CLLL CHHH HHHH HHHH HHHH HHHH\\
+CBO delay & LL LLLL LLLL CHHH CLLL CHHH HHHH HHHH HHHH HH\\
 $O_{0}$ & 16{2L}CHHH\\
 $O_{1}$ & 16{2L}CHHH\\
 $O_{2}$ & 18{2L}\\
 $O_{3}$ & 16{2L}CHHH\\
-Parity bit & 16{2L}CHHH\\
+Parity bit & LLLL N(B2) LLLL N(B3) LLLL N(B4) LLLL N(B5) LLLL N(B6) LLLL N(B7) LLLL N(B8) LLLL N(B9) CHHH\\
 \extracode
   \tablerules
-%  \begin{pgfonlayer}{background}
-%    \foreach \n in {1,...,10}
-%      \draw [help lines] (A\n) -- (B\n);
-%  \end{pgfonlayer}
+  \begin{pgfonlayer}{background}
+    \foreach \n in {2,...,9}
+      \draw [help lines] (A\n) -- (B\n);
+  \end{pgfonlayer}
 \end{tikztimingtable}
 %
 \end{document}
