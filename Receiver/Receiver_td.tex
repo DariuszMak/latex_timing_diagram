@@ -7,7 +7,7 @@
 %
 
 \documentclass{article}
-\usepackage{tikz-timing}[2009/05/15]
+\usepackage{tikz-timing}
 
 %%%<
 \usepackage{verbatim}
@@ -16,23 +16,25 @@
 \setlength\PreviewBorder{5pt}%
 %%%>
 
+\definecolor{trueblue}{rgb}{0.0, 0.45, 0.81}
+
 \begin{document}
 
 \def\degr{${}^\circ$}
 \begin{tikztimingtable}
-$I_{0}$ & HHHH N(A2) HHHH N(A3) HHHH N(A4) HHHH N(A5) HHHH N(A6) HHHH N(A7) HHHH N(A8) HHHH N(A9) HHHH\\
-$I_{1}$ & 18{2H}\\
-$I_{2}$ & 18{2L}\\
-$I_{3}$ & 18{2H}\\
-$OK_{(button)}$ & LLLLCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH \\
-$C_{(receiver)}$ & LLLL 14{2C} LLLL\\
-CBO & LLLL LLLL CHHH CLLL CHHH HHHH HHHH HHHH HHHH\\
-CBO delay & LL LLLL LLLL CHHH CLLL CHHH HHHH HHHH HHHH HH\\
-$O_{0}$ & 16{2L}CHHH\\
-$O_{1}$ & 16{2L}CHHH\\
-$O_{2}$ & 18{2L}\\
-$O_{3}$ & 16{2L}CHHH\\
-Parity bit & LLLL N(B2) LLLL N(B3) LLLL N(B4) LLLL N(B5) LLLL N(B6) LLLL N(B7) LLLL N(B8) LLLL N(B9) CHHH\\
+$I_{0}$ & HHHH N(A2) HHHH N(A3) HHHH N(A4) HHHH N(A5) HHHH N(A6) HHHH N(A7) HHHH N(A8) HHHH N(A9) HHHH [trueblue]\\
+$I_{1}$ & 18{2H} [trueblue] \\
+$I_{2}$ & 18{2L} [trueblue] \\
+$I_{3}$ & 18{2H} [trueblue] \\
+$OK_{(button)}$ & LLLLCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH [trueblue] \\
+$C_{(receiver)}$ & LLLL 14{2C} LLLL [trueblue] \\
+CBO & HHHH CLLL CHHH CLLL CHHH HHHH HHHH HHHH HHHH [trueblue]\\
+CBO delay & HH HHHH CLLL CHHH CLLL CHHH HHHH HHHH HHHH HH [trueblue] \\
+$O_{0}$ & 16{2L}CHHH [trueblue] \\
+$O_{1}$ & 16{2L}CHHH [trueblue] \\
+$O_{2}$ & 18{2L} [trueblue] \\
+$O_{3}$ & 16{2L}CHHH [trueblue] \\
+Parity bit & LLLL N(B2) LLLL N(B3) LLLL N(B4) LLLL N(B5) LLLL N(B6) LLLL N(B7) LLLL N(B8) LLLL N(B9) CHHH [trueblue] \\
 \extracode
   \tablerules
   \begin{pgfonlayer}{background}
